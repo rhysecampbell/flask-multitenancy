@@ -2,10 +2,10 @@ CREATE DATABASE General;
 
 USE General;
 
-DROP TABLE IF EXISTS `tenants`;
+DROP TABLE IF EXISTS tenants;
 
-CREATE TABLE `tenants` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE tenants (
+  id int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   KEY `Tenants_id_IDX` (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;

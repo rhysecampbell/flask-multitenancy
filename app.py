@@ -6,8 +6,9 @@ from models import User
 
 app = Flask(__name__)
 app.secret_key = os.urandom(42)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:pwd@localhost/General?charset=utf8'
-app.config['SQLALCHEMY_BINDS'] = {}
+app.config.from_pyfile('hello.cfg')
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:pwd@localhost/General?charset=utf8'
+#app.config['SQLALCHEMY_BINDS'] = {}
 db.init_app(app)
 
 
