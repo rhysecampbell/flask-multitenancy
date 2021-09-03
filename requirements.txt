@@ -1,0 +1,6 @@
+flask==1.1.4
+werkzeug==0.16.0
+flask_sqlalchemy
+sqlalchemy
+sqlalchemy-cockroachdb
+psycopg2-binary
