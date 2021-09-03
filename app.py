@@ -16,10 +16,12 @@ db.init_app(app)
 def index(tenant_name):
     tenant_session = get_tenant_session(tenant_name)
     if not tenant_session:
-        abort(404)
+        abort(300)
     users = tenant_session.query(User).all()
     return jsonify({tenant_name: [i.username for i in users]})
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route("/test")
+def hello():
+    return "Hello Boulder!"
+
